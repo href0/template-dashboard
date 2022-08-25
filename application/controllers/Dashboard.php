@@ -6,7 +6,7 @@ class Dashboard extends CI_Controller
     public function index()
     {
         $data = [
-            'title'         => '',
+            'title'         => 'Padaidi Corp',
             'page'          => '',
             'sub_page'      => '',
             'content'       => 'dashboard/index'
