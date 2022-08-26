@@ -72,16 +72,16 @@
                   {
                       extend: 'pdf',
                       title: '<?= $title   ?>',
-                      exportOptions: {
-                          columns: columns
-                      }
+                      //   exportOptions: {
+                      //       columns: columns
+                      //   }
                   },
                   {
                       extend: 'excel',
                       title: '<?= $title   ?>',
-                      exportOptions: {
-                          columns: columns
-                      }
+                      //   exportOptions: {
+                      //       columns: columns
+                      //   }
                   },
               ]
           }).buttons().container().appendTo('#table_wrapper .col-md-6:eq(0)');
