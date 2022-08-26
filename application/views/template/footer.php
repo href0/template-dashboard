@@ -56,14 +56,7 @@
 
   <script>
       $(function() {
-          let column = $('#columnDatatable').data('value')
-          let columns = []
-          if (column == 'Bengkel' || column == 'PKL') {
-              columns = [0, 1, 2, 3, 4]
-          } else if (column == 'Siswa PKL' || column == 'Agenda') {
-              columns = [0, 1, 2, 3, 4, 5]
-          }
-          console.log(column)
+
           $("#table").DataTable({
               "responsive": true,
               "lengthChange": false,
@@ -71,10 +64,10 @@
               //   "buttons": ["excel", "pdf", "print"]
               "buttons": [{
                       extend: 'print',
-                      title: 'PKL Bengkel | ' + '<?= $title   ?>',
-                      exportOptions: {
-                          columns: columns
-                      }
+                      title: 'Padaidi Corp | ' + '<?= $title   ?>',
+                      //   exportOptions: {
+                      //       columns: columns
+                      //   }
                   },
                   {
                       extend: 'pdf',

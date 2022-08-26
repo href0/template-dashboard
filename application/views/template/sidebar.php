@@ -21,9 +21,9 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-header">ADMIN</li>
+                <!-- <li class="nav-header">DATA MASTER</li> -->
                 <li class="nav-item">
-                    <a href="" class="nav-link active">
+                    <a href="<?= base_url('') ?>" class="nav-link<?= $page == 'Dashboard' ? ' active' : '' ?>">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
@@ -31,18 +31,10 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">
-                        <i class="nav-icon fas fa-users"></i>
+                    <a href="<?= base_url('table') ?>" class="nav-link<?= $page == 'Table' ? ' active' : '' ?>">
+                        <i class="nav-icon fas fa-table"></i>
                         <p>
-                            Menu 1
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">
-                        <i class="nav-icon fas fa-users"></i>
-                        <p>
-                            Menu 2
+                            Table
                         </p>
                     </a>
                 </li>
@@ -50,7 +42,7 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-table"></i>
                         <p>
-                            Tables
+                            Drop Down Menu
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
@@ -58,33 +50,33 @@
                         <li class="nav-item">
                             <a href="pages/tables/simple.html" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Simple Tables</p>
+                                <p>Menu 1</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="pages/tables/data.html" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>DataTables</p>
+                                <p>Menu 2</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="pages/tables/jsgrid.html" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>jsGrid</p>
+                                <p>Menu 3</p>
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-header">EXAMPLES</li>
+                <li class="nav-header">DATA</li>
                 <li class="nav-item">
-                    <a href="pages/calendar.html" class="nav-link">
-                        <i class="nav-icon far fa-calendar-alt"></i>
+                    <a href="<?= base_url('user') ?>" class="nav-link">
+                        <i class="nav-icon fas fa-user"></i>
                         <p>
-                            Calendar
-                            <span class="badge badge-info right">2</span>
+                            User
                         </p>
                     </a>
                 </li>
+                <li class="nav-header">AUTH</li>
                 <li class="nav-item">
                     <a href="<?= base_url('auth/logout') ?>" class="nav-link">
                         <i class="nav-icon far fas fa-sign-out-alt "></i>
@@ -110,8 +102,10 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item"><a href="<?= base_url('dashboard') ?>">Dashboard</a></li>
+                        <?php if ($page != 'Dashboard') : ?>
+                            <li class="breadcrumb-item active"><?= $page ?></li>
+                        <?php endif ?>
                         <!-- <li class="<?= $sub_page ? 'breadcrumb-item' : '' ?>"><?= $sub_page ?? '' ?></li> -->
                     </ol>
                 </div>
